@@ -1,0 +1,30 @@
+<div id="content" class="col-10 container">
+
+  <header id="header" class="col-12" [style.background]="header_color">
+  	<h1>
+   	 {{ title }}
+  	</h1>
+  </header>
+
+  <!--Configuramos barra de navegacion-->
+  <nav id="nav" class="col-12 clearfix">
+  	<ul>
+  		<li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a></li>
+  		<li><a [routerLink]="['/productos']" [routerLinkActive]="['activado']">Productos </a></li>
+  		<li><a [routerLink]="['/crear-producto']" [routerLinkActive]="['activado']">Crear Productos</a></li>
+  	</ul>
+  </nav>
+
+  <section id="main" class="col-12">
+  	<!--Contenido principal de cada componente-->
+    <router-outlet></router-outlet>
+  	<br>
+	<h3></h3>
+  </section>
+
+  <footer id="footer" class="col-12">
+  	<p>Alberto Pulido</p>
+  </footer>
+
+</div>
+
